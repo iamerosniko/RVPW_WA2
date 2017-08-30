@@ -1,0 +1,968 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00BACB56-A915-4425-893B-F4E6D32AD618}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectWorkplaceAzure</RootNamespace>
+    <AssemblyName>ProjectWorkplaceAzure</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AnswersController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LeadersController.cs" />
+    <Compile Include="Controllers\TeamsController.cs" />
+    <Compile Include="Controllers\QuestionsController.cs" />
+    <Compile Include="Controllers\ResourcesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708181942357_Initial.cs" />
+    <Compile Include="Migrations\201708181942357_Initial.Designer.cs">
+      <DependentUpon>201708181942357_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708182152135_m001.cs" />
+    <Compile Include="Migrations\201708182152135_m001.Designer.cs">
+      <DependentUpon>201708182152135_m001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708191101189_m002.cs" />
+    <Compile Include="Migrations\201708191101189_m002.Designer.cs">
+      <DependentUpon>201708191101189_m002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708282055202_m003.cs" />
+    <Compile Include="Migrations\201708282055202_m003.Designer.cs">
+      <DependentUpon>201708282055202_m003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708282102264_m004.cs" />
+    <Compile Include="Migrations\201708282102264_m004.Designer.cs">
+      <DependentUpon>201708282102264_m004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ProjectWorkplaceAzureContext.cs" />
+    <Compile Include="Models\PW_Answers.cs" />
+    <Compile Include="Models\PW_Answers_DTO.cs" />
+    <Compile Include="Models\PW_Auth_DTO.cs" />
+    <Compile Include="Models\PW_ContentReader.cs" />
+    <Compile Include="Models\PW_Examinees.cs" />
+    <Compile Include="Models\PW_GetCurrentUser_Result.cs" />
+    <Compile Include="Models\PW_GetResourcePath2_Result.cs" />
+    <Compile Include="Models\PW_GetResourcePath_Result.cs" />
+    <Compile Include="Models\PW_GetVideo_Result.cs" />
+    <Compile Include="Models\PW_Leaders.cs" />
+    <Compile Include="Models\PW_Persons.cs" />
+    <Compile Include="Models\PW_Persons_DTO.cs" />
+    <Compile Include="Models\PW_PersonTeams.cs" />
+    <Compile Include="Models\PW_Questions.cs" />
+    <Compile Include="Models\PW_Questions_DTO.cs" />
+    <Compile Include="Models\PW_QuizTags.cs" />
+    <Compile Include="Models\PW_Resources.cs" />
+    <Compile Include="Models\PW_Roles.cs" />
+    <Compile Include="Models\PW_Subjects.cs" />
+    <Compile Include="Models\PW_TeamResources.cs" />
+    <Compile Include="Models\PW_TeamResource_DTO.cs" />
+    <Compile Include="Models\PW_Teams.cs" />
+    <Compile Include="Models\PW_Teams_DTO.cs" />
+    <Compile Include="Models\PW_TemporaryUsers.cs" />
+    <Compile Include="Models\PW_ViewEmployeeScore.cs" />
+    <Compile Include="Models\PW_VW_QUESTIONS.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="assets\css\check-templates\blue.png" />
+    <Content Include="assets\css\check-templates\elegant.png" />
+    <Content Include="assets\css\Checkboxes.css" />
+    <Content Include="assets\css\ng2-select.css" />
+    <Content Include="assets\css\SideNav.css" />
+    <Content Include="assets\css\Site.css" />
+    <Content Include="assets\images\background.jpg" />
+    <Content Include="assets\images\JohnHancock.png" />
+    <Content Include="assets\images\Manulife.png" />
+    <Content Include="assets\images\Manulife_Logo.png" />
+    <Content Include="assets\images\Manulife_Logo_Small.png" />
+    <Content Include="assets\workplace\dis-overview\01-Mission Vision.png" />
+    <Content Include="assets\workplace\dis-overview\02-Organizational Chart.jpg" />
+    <Content Include="assets\workplace\dis-overview\04-Functional Tower.jpg" />
+    <Content Include="assets\workplace\dis-overview\disprograms\aspire.jpg" />
+    <Content Include="assets\workplace\dis-overview\disprograms\careers.jpg" />
+    <Content Include="assets\workplace\dis-overview\disprograms\cares.jpg" />
+    <Content Include="assets\workplace\dis-overview\disprograms\digerati.jpg" />
+    <Content Include="assets\workplace\dis-overview\disprograms\motivate.jpg" />
+    <Content Include="assets\workplace\dis-overview\disprograms\New folder\Aspire.jpg" />
+    <Content Include="assets\workplace\dis-overview\disprograms\New folder\Careers.JPG" />
+    <Content Include="assets\workplace\dis-overview\disprograms\New folder\Cares.JPG" />
+    <Content Include="assets\workplace\dis-overview\disprograms\New folder\Digerati.JPG" />
+    <Content Include="assets\workplace\dis-overview\disprograms\New folder\Motivate.jpg" />
+    <Content Include="assets\workplace\dis-overview\functional towers.jpg" />
+    <Content Include="assets\workplace\dis-overview\functional towers2.jpg" />
+    <Content Include="assets\workplace\dis-overview\strategies\DIS-Strategies.jpg" />
+    <Content Include="assets\workplace\dis-overview\strategies\Strategy-1.jpg" />
+    <Content Include="assets\workplace\dis-overview\strategies\Strategy-2.jpg" />
+    <Content Include="assets\workplace\dis-overview\strategies\Strategy-3.jpg" />
+    <Content Include="assets\workplace\dis-overview\strategies\Strategy-4.jpg" />
+    <Content Include="assets\workplace\dis-tools\MBPS Hotlines.jpg" />
+    <Content Include="assets\workplace\leaders\ana.mp4" />
+    <Content Include="assets\workplace\leaders\arvan.mp4" />
+    <Content Include="assets\workplace\leaders\cyren.mp4" />
+    <Content Include="assets\workplace\leaders\denmar.mp4" />
+    <Content Include="assets\workplace\leaders\DSS.mp4" />
+    <Content Include="assets\workplace\leaders\Gelo.mp4" />
+    <Content Include="assets\workplace\leaders\gk.mp4" />
+    <Content Include="assets\workplace\leaders\Harri.mp4" />
+    <Content Include="assets\workplace\leaders\inah.mp4" />
+    <Content Include="assets\workplace\leaders\Joyce.mp4" />
+    <Content Include="assets\workplace\leaders\Kenneth.mp4" />
+    <Content Include="assets\workplace\leaders\leny.mp4" />
+    <Content Include="assets\workplace\leaders\paulyn.mp4" />
+    <Content Include="assets\workplace\leaders\rex.mp4" />
+    <Content Include="assets\workplace\leaders\richard.mp4" />
+    <Content Include="assets\workplace\leaders\roztle.mp4" />
+    <Content Include="assets\workplace\leaders\rudi.mp4" />
+    <Content Include="assets\workplace\leaders\ryan.mp4" />
+    <Content Include="assets\workplace\leaders\tim.mp4" />
+    <Content Include="assets\workplace\leaders\yerrick.mp4" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide1.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide10.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide11.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide12.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide13.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide14.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide15.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide16.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide17.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide18.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide19.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide2.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide20.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide21.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide22.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide23.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide24.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide25.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide26.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide27.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide28.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide29.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide3.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide30.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide31.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide32.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide33.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide4.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide5.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide6.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide7.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide8.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Apps\Slide9.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Org\Images\albert.jpg" />
+    <Content Include="assets\workplace\team-overview\Team Org\Images\default.PNG" />
+    <Content Include="assets\workplace\team-overview\Team Org\Images\eros.jpg" />
+    <Content Include="assets\workplace\team-overview\Team Org\Images\gk.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Org\Images\jeng.jpg" />
+    <Content Include="assets\workplace\team-overview\Team Org\Images\joys.jpg" />
+    <Content Include="assets\workplace\team-overview\Team Org\Images\la.jpg" />
+    <Content Include="assets\workplace\team-overview\Team Org\Images\mat.jpg" />
+    <Content Include="assets\workplace\team-overview\Team Org\Images\nick.jpg" />
+    <Content Include="assets\workplace\team-overview\Team Org\sample.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\Scripts\jquery.min.js" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\js\npm.js" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\OrgChart.css" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\SideNav.css" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\Site.css" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_applicationdevelopment.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_applicationsupport.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_businessintelligence.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_cdninstisrm.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_cdnretailsrm.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_customerexperiencemanagement.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_esd.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_globalreporting.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsddatabaseadministration.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsddigitalandcollaborationplatformservices.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdgfl2appsupport.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdifsissupport.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdinvappsupport.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdinvestmentinformationservices.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdisaccountingsupport.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdplatformadmin.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdpmas.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdproductionservices.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdqlikviewdevelopment.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdreleasemanagement.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdschedulingautomation.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdsystemadministrator.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_gsdsystemsandplatformoperationservices.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_integrationtechservices.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_jhdevelopmentandsupportservices.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_jhinfosecmgt.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_jhitops.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_jhsasdatabase.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_jhsasdatamasking.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_jhsasplatformservices.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_jhsasrem.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_jhtass.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\teamorg_transitionservices.html" />
+    <Content Include="assets\workplace\team-overview\Team Org\temp.html" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide1.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide10.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide11.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide12.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide13.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide14.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide15.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide16.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide17.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide18.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide19.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide2.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide20.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide21.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide22.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide23.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide24.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide25.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide26.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide27.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide28.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide29.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide3.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide30.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide31.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide32.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide33.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide34.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide4.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide5.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide6.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide7.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide8.JPG" />
+    <Content Include="assets\workplace\team-overview\Team Services\Slide9.JPG" />
+    <Content Include="assets\workplace\Workplace Questions.txt" />
+    <Content Include="Content\fontawesome-webfont.912ec66d7572ff821749.svg" />
+    <Content Include="Content\glyphicons-halflings-regular.89889688147bd7575d63.svg" />
+    <Content Include="Content\styles.bundle.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Migrations\PW_ViewEmployeeScore.View.sql" />
+    <Content Include="Migrations\PW_VW_QUESTIONS.View.sql" />
+    <Content Include="Content\fontawesome-webfont.674f50d287a8c48dc19b.eot" />
+    <Content Include="Content\fontawesome-webfont.af7ae505a9eed503f8b8.woff2" />
+    <Content Include="Content\fontawesome-webfont.b06871f281fee6b241d6.ttf" />
+    <Content Include="Content\fontawesome-webfont.fee66e712a8a08eef580.woff" />
+    <Content Include="Content\glyphicons-halflings-regular.448c34a56d699c29117a.woff2" />
+    <Content Include="Content\glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf" />
+    <Content Include="Content\glyphicons-halflings-regular.f4769f9bdb7466be6508.eot" />
+    <Content Include="Content\glyphicons-halflings-regular.fa2772327f55d8198301.woff" />
+    <Content Include="assets\workplace\dis-tools\Khronos.pdf" />
+    <Content Include="assets\workplace\dis-tools\OPT.pdf" />
+    <Content Include="assets\workplace\dis-tools\Workday.pdf" />
+    <Content Include="assets\workplace\policies\Bereavement Policy.pdf" />
+    <Content Include="assets\workplace\policies\Information Security_Other Asia and Support.pdf" />
+    <Content Include="assets\workplace\policies\Privacy Policy_CDN, Other Asia and Support_08-2012.pdf" />
+    <Content Include="assets\workplace\policies\VACATION LEAVE.pdf" />
+    <Content Include="assets\workplace\policies\WORK RULES.pdf" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\core.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\list.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\path.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="assets\workplace\team-overview\Team Org\Styles\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="Properties\PublishProfiles\ProjectWorkplaceAzure.pubxml" />
+    <Content Include="resources\background.png" />
+    <Content Include="resources\Images\background.jpg" />
+    <Content Include="resources\Images\background.png" />
+    <Content Include="resources\Images\JohnHancock.png" />
+    <Content Include="resources\Images\Manulife.png" />
+    <Content Include="resources\Images\Manulife_Logo.old.png" />
+    <Content Include="resources\Images\Manulife_Logo.png" />
+    <Content Include="resources\Images\Manulife_Logo_Small.png" />
+    <Content Include="resources\mock\videoplayback.mp4" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\01-Mission Vision.png" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\02-Organizational Chart.jpg" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\03-Strategies.png" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\04-Functional Tower.jpg" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\functional towers.jpg" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\functional towers2.jpg" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Programs\Aspire.JPG" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Programs\Careers.JPG" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Programs\Cares.JPG" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Programs\Digerati.JPG" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Programs\Motivate.jpg" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Strategies\03 - Strategy-1.jpg" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Strategies\03 - Strategy-2.jpg" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Strategies\03 - Strategy-3.jpg" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Strategies\03 - Strategy-4.jpg" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Strategies\03a - customer experience.png" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Strategies\03b - process improvement.png" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Strategies\03c - cost efficiencies.png" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Strategies\03d - performance.png" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Strategies\04 - Functional Tower.jpg" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Strategies\MBPS Digital Information Services TH April 28.jpg" />
+    <Content Include="resources\workplace\01DIS OVERVIEW\Strategies\strategies.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide1.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide10.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide11.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide12.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide13.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide14.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide15.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide16.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide17.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide18.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide19.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide2.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide20.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide21.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide22.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide23.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide24.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide25.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide26.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide27.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide28.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide29.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide3.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide30.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide31.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide32.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide33.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide4.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide5.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide6.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide7.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide8.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Apps\Slide9.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Images\albert.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Images\default.PNG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Images\eros.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Images\gk.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Images\jeng.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Images\joys.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Images\la.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Images\mat.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Images\nick.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\sample.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Scripts\jquery.min.js" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\js\npm.js" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\OrgChart.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\SideNav.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\Site.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_applicationdevelopment.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_applicationsupport.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_businessintelligence.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_cdninstisrm.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_cdnretailsrm.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_customerexperiencemanagement.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_esd.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_globalreporting.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsddatabaseadministration.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsddigitalandcollaborationplatformservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdgfl2appsupport.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdifsissupport.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdinvappsupport.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdinvestmentinformationservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdisaccountingsupport.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdplatformadmin.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdpmas.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdproductionservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdqlikviewdevelopment.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdreleasemanagement.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdschedulingautomation.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdsystemadministrator.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_gsdsystemsandplatformoperationservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_integrationtechservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_jhdevelopmentandsupportservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_jhinfosecmgt.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_jhitops.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_jhsasdatabase.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_jhsasdatamasking.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_jhsasplatformservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_jhsasrem.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_jhtass.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\teamorg_transitionservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\temp.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide1.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide10.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide11.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide12.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide13.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide14.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide15.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide16.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide17.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide18.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide19.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide2.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide20.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide21.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide22.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide23.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide24.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide25.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide26.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide27.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide28.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide29.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide3.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide30.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide31.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide32.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide33.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide4.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide5.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide6.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide7.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide8.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Services\Slide9.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide1.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide10.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide11.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide12.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide13.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide14.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide15.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide16.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide17.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide18.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide19.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide2.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide20.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide21.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide22.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide23.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide24.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide25.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide26.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide27.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide28.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide29.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide3.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide30.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide31.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide32.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide33.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide4.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide5.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide6.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide7.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide8.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Apps\Slide9.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Images\albert.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Images\default.PNG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Images\eros.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Images\gk.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Images\jeng.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Images\joys.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Images\la.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Images\mat.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Images\nick.jpg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\sample.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Scripts\jquery.min.js" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\js\npm.js" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\OrgChart.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\SideNav.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\Site.css" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_applicationdevelopment.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_applicationsupport.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_businessintelligence.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_cdninstisrm.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_cdnretailsrm.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_customerexperiencemanagement.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_esd.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_globalreporting.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsddatabaseadministration.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsddigitalandcollaborationplatformservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdgfl2appsupport.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdifsissupport.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdinvappsupport.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdinvestmentinformationservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdisaccountingsupport.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdplatformadmin.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdpmas.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdproductionservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdqlikviewdevelopment.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdreleasemanagement.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdschedulingautomation.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdsystemadministrator.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_gsdsystemsandplatformoperationservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_integrationtechservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_jhdevelopmentandsupportservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_jhinfosecmgt.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_jhitops.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_jhsasdatabase.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_jhsasdatamasking.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_jhsasplatformservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_jhsasrem.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_jhtass.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\teamorg_transitionservices.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\temp.html" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide1.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide10.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide11.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide12.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide13.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide14.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide15.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide16.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide17.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide18.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide19.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide2.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide20.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide21.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide22.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide23.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide24.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide25.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide26.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide27.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide28.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide29.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide3.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide30.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide31.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide32.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide33.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide34.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide4.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide5.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide6.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide7.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide8.JPG" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Services\Slide9.JPG" />
+    <Content Include="resources\workplace\03LEADERS\ana.mp4" />
+    <Content Include="resources\workplace\03LEADERS\arvan.mp4" />
+    <Content Include="resources\workplace\03LEADERS\cyren.mp4" />
+    <Content Include="resources\workplace\03LEADERS\denmar.mp4" />
+    <Content Include="resources\workplace\03LEADERS\DSS.mp4" />
+    <Content Include="resources\workplace\03LEADERS\Gelo.mp4" />
+    <Content Include="resources\workplace\03LEADERS\gk.mp4" />
+    <Content Include="resources\workplace\03LEADERS\Harri.mp4" />
+    <Content Include="resources\workplace\03LEADERS\inah.mp4" />
+    <Content Include="resources\workplace\03LEADERS\Joyce.mp4" />
+    <Content Include="resources\workplace\03LEADERS\Kenneth.mp4" />
+    <Content Include="resources\workplace\03LEADERS\leny.mp4" />
+    <Content Include="resources\workplace\03LEADERS\paulyn.mp4" />
+    <Content Include="resources\workplace\03LEADERS\rex.mp4" />
+    <Content Include="resources\workplace\03LEADERS\richard.mp4" />
+    <Content Include="resources\workplace\03LEADERS\roztle.mp4" />
+    <Content Include="resources\workplace\03LEADERS\rudi.mp4" />
+    <Content Include="resources\workplace\03LEADERS\ryan.mp4" />
+    <Content Include="resources\workplace\03LEADERS\tim.mp4" />
+    <Content Include="resources\workplace\03LEADERS\yerrick.mp4" />
+    <Content Include="resources\workplace\04DIS TOOLS\MBPS Hotlines.jpg" />
+    <Content Include="resources\workplace\OLD\03 - Mission vision.old.jpg" />
+    <Content Include="resources\workplace\OLD\03 - Mission vision.png" />
+    <Content Include="resources\workplace\OLD\04 - Functional Tower.jpg" />
+    <Content Include="resources\workplace\OLD\04 - orgChart.jpg" />
+    <Content Include="resources\workplace\OLD\04 - orgChart.old.jpg" />
+    <Content Include="resources\workplace\OLD\05 - strategies\DISStrategies.pptx.png" />
+    <Content Include="resources\workplace\OLD\05 - stratergies.jpg" />
+    <Content Include="resources\workplace\OLD\06 - service catalogue.old\ServiceCatalogue_GlobalReportAndDigitalStrategy.png" />
+    <Content Include="resources\workplace\OLD\06 - service catalogue.old\ServiceCatalogue_ISOps.png" />
+    <Content Include="resources\workplace\OLD\06 - service catalogue.old\ServiceCatalogue_SocialMediaServices.png" />
+    <Content Include="resources\workplace\Workplace Questions.txt" />
+    <Content Include="Scripts\inline.bundle.js" />
+    <Content Include="Scripts\main.bundle.js" />
+    <Content Include="Scripts\polyfills.bundle.js" />
+    <Content Include="Scripts\scripts.bundle.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\core.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\list.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\path.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW - Copy\Team Org\Styles\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\core.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\list.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\path.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="resources\workplace\02TEAM OVERVIEW\Team Org\Styles\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="resources\workplace\04DIS TOOLS\01OPT.pdf" />
+    <Content Include="resources\workplace\04DIS TOOLS\03Khronos.pdf" />
+    <Content Include="resources\workplace\04DIS TOOLS\Workday Guide.pdf" />
+    <Content Include="resources\workplace\04DIS TOOLS\Workday Guide.pptx" />
+    <Content Include="resources\workplace\05POLICIES\Bereavement Policy.pdf" />
+    <Content Include="resources\workplace\05POLICIES\Information Security_Other Asia and Support.pdf" />
+    <Content Include="resources\workplace\05POLICIES\Privacy Policy_CDN, Other Asia and Support_08-2012.pdf" />
+    <Content Include="resources\workplace\05POLICIES\VACATION LEAVE.pdf" />
+    <Content Include="resources\workplace\05POLICIES\WORK RULES.pdf" />
+    <Content Include="resources\workplace\OLD\16 - OPT doc.pdf" />
+    <Content Include="resources\workplace\OLD\18 - Khronos.pdf" />
+    <Content Include="resources\workplace\OLD\19 - WORK RULES.FINAL.old.pdf" />
+    <Content Include="resources\workplace\OLD\19 - WORK RULES.FINAL.pdf" />
+    <Content Include="resources\workplace\OLD\20 - Vacation Leave.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708181942357_Initial.resx">
+      <DependentUpon>201708181942357_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708182152135_m001.resx">
+      <DependentUpon>201708182152135_m001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708191101189_m002.resx">
+      <DependentUpon>201708191101189_m002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708282055202_m003.resx">
+      <DependentUpon>201708282055202_m003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708282102264_m004.resx">
+      <DependentUpon>201708282102264_m004.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61157</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61157/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
