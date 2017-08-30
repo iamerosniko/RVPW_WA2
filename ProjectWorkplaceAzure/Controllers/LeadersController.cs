@@ -9,9 +9,12 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using ProjectWorkplaceAzure.Models;
+using System.Web.Http.Cors;
 
 namespace ProjectWorkplaceAzure.Controllers
 {
+    [EnableCors(origins: "*",
+    headers: "*", methods: "*", exposedHeaders: "*")]
     public class LeadersController : ApiController
     {
         private ProjectWorkplaceAzureContext db = new ProjectWorkplaceAzureContext();
