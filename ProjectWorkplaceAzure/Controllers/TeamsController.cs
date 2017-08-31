@@ -19,7 +19,7 @@ namespace ProjectWorkplaceAzure.Controllers
         // GET: api/PW_Teams
         public IQueryable<PW_Teams> GetPW_Teams()
         {
-            return db.PW_Teams;
+            return db.PW_Teams.OrderBy(x=>x.TeamDesc);
         }
 
         // GET: api/PW_Teams/5

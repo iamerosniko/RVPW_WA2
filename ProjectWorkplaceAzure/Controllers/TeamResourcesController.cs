@@ -9,48 +9,47 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using ProjectWorkplaceAzure.Models;
-using System.Web.Http.Cors;
 
 namespace ProjectWorkplaceAzure.Controllers
 {
-    public class LeadersController : ApiController
+    public class TeamResourcesController : ApiController
     {
         private ProjectWorkplaceAzureContext db = new ProjectWorkplaceAzureContext();
 
-        // GET: api/Leaders
-        public IQueryable<PW_Leaders> GetPW_Leaders()
+        // GET: api/TeamResources
+        public IQueryable<PW_TeamResources> GetPW_TeamResources()
         {
-            return db.PW_Leaders.OrderBy(x=>x.LeaderName);
+            return db.PW_TeamResources;
         }
 
-        // GET: api/Leaders/5
-        [ResponseType(typeof(PW_Leaders))]
-        public IHttpActionResult GetPW_Leaders(int id)
+        // GET: api/TeamResources/5
+        [ResponseType(typeof(PW_TeamResources))]
+        public IHttpActionResult GetPW_TeamResources(int id)
         {
-            PW_Leaders pW_Leaders = db.PW_Leaders.Find(id);
-            if (pW_Leaders == null)
+            PW_TeamResources pW_TeamResources = db.PW_TeamResources.Find(id);
+            if (pW_TeamResources == null)
             {
                 return NotFound();
             }
 
-            return Ok(pW_Leaders);
+            return Ok(pW_TeamResources);
         }
 
-        // PUT: api/Leaders/5
+        // PUT: api/TeamResources/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutPW_Leaders(int id, PW_Leaders pW_Leaders)
+        public IHttpActionResult PutPW_TeamResources(int id, PW_TeamResources pW_TeamResources)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != pW_Leaders.LeaderID)
+            if (id != pW_TeamResources.TeamResourceID)
             {
                 return BadRequest();
             }
 
-            db.Entry(pW_Leaders).State = EntityState.Modified;
+            db.Entry(pW_TeamResources).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +57,7 @@ namespace ProjectWorkplaceAzure.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PW_LeadersExists(id))
+                if (!PW_TeamResourcesExists(id))
                 {
                     return NotFound();
                 }
@@ -71,35 +70,35 @@ namespace ProjectWorkplaceAzure.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Leaders
-        [ResponseType(typeof(PW_Leaders))]
-        public IHttpActionResult PostPW_Leaders(PW_Leaders pW_Leaders)
+        // POST: api/TeamResources
+        [ResponseType(typeof(PW_TeamResources))]
+        public IHttpActionResult PostPW_TeamResources(PW_TeamResources pW_TeamResources)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.PW_Leaders.Add(pW_Leaders);
+            db.PW_TeamResources.Add(pW_TeamResources);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = pW_Leaders.LeaderID }, pW_Leaders);
+            return CreatedAtRoute("DefaultApi", new { id = pW_TeamResources.TeamResourceID }, pW_TeamResources);
         }
 
-        // DELETE: api/Leaders/5
-        [ResponseType(typeof(PW_Leaders))]
-        public IHttpActionResult DeletePW_Leaders(int id)
+        // DELETE: api/TeamResources/5
+        [ResponseType(typeof(PW_TeamResources))]
+        public IHttpActionResult DeletePW_TeamResources(int id)
         {
-            PW_Leaders pW_Leaders = db.PW_Leaders.Find(id);
-            if (pW_Leaders == null)
+            PW_TeamResources pW_TeamResources = db.PW_TeamResources.Find(id);
+            if (pW_TeamResources == null)
             {
                 return NotFound();
             }
 
-            db.PW_Leaders.Remove(pW_Leaders);
+            db.PW_TeamResources.Remove(pW_TeamResources);
             db.SaveChanges();
 
-            return Ok(pW_Leaders);
+            return Ok(pW_TeamResources);
         }
 
         protected override void Dispose(bool disposing)
@@ -111,9 +110,9 @@ namespace ProjectWorkplaceAzure.Controllers
             base.Dispose(disposing);
         }
 
-        private bool PW_LeadersExists(int id)
+        private bool PW_TeamResourcesExists(int id)
         {
-            return db.PW_Leaders.Count(e => e.LeaderID == id) > 0;
+            return db.PW_TeamResources.Count(e => e.TeamResourceID == id) > 0;
         }
     }
 }

@@ -66,5 +66,7 @@ namespace ProjectWorkplaceAzure.Models
 
             return ((System.Data.Entity.Infrastructure.IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PW_GetResourcePath_Result>("PW_GetResourcePath", usernameParameter, resourceCategoryParameter);
         }
+
+        public System.Data.Entity.DbSet<ProjectWorkplaceAzure.Models.PW_TeamResources> PW_TeamResources { get; set; }
     }
 }
