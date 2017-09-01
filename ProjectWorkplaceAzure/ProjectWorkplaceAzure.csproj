@@ -194,6 +194,10 @@
     <Compile Include="Migrations\201708282102264_m004.Designer.cs">
       <DependentUpon>201708282102264_m004.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709011236111_m005.cs" />
+    <Compile Include="Migrations\201709011236111_m005.Designer.cs">
+      <DependentUpon>201709011236111_m005.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ProjectWorkplaceAzureContext.cs" />
     <Compile Include="Models\PW_Answers.cs" />
@@ -524,6 +528,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708282102264_m004.resx">
       <DependentUpon>201708282102264_m004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709011236111_m005.resx">
+      <DependentUpon>201709011236111_m005.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

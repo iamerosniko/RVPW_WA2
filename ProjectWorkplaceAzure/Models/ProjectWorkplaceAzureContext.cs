@@ -44,6 +44,8 @@ namespace ProjectWorkplaceAzure.Models
 
         public System.Data.Entity.DbSet<ProjectWorkplaceAzure.Models.PW_TemporaryUsers> PW_TemporaryUsers { get; set; }
 
+        public System.Data.Entity.DbSet<ProjectWorkplaceAzure.Models.PW_TeamResources> PW_TeamResources { get; set; }
+
         public System.Data.Entity.DbSet<ProjectWorkplaceAzure.Models.PW_VW_QUESTIONS> PW_VW_QUESTIONS { get; set; }
 
         public System.Data.Entity.DbSet<ProjectWorkplaceAzure.Models.PW_ViewEmployeeScore> PW_ViewEmployeeScore { get; set; }
@@ -67,6 +69,5 @@ namespace ProjectWorkplaceAzure.Models
             return ((System.Data.Entity.Infrastructure.IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PW_GetResourcePath_Result>("PW_GetResourcePath", usernameParameter, resourceCategoryParameter);
         }
 
-        public System.Data.Entity.DbSet<ProjectWorkplaceAzure.Models.PW_TeamResources> PW_TeamResources { get; set; }
     }
 }
