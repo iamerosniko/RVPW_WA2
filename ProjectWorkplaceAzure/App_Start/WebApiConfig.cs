@@ -22,11 +22,21 @@ namespace ProjectWorkplaceAzure
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            //enable cors
+            //install Microsoft.AspNet.WebApi.Cors package first using nuget package management
+            //enabling cors
             EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
             //for chrome to enable preflight request 
             //--disable-web-security --user-data-dir
+            
+            //to filter the cors
+            //import System.Web.Http.Cors to every controller you want to filter
+            //add annotation this to controller's class
+            //[EnableCorsAttribute("*","*","*")] 
+            //to disable some httpmethods 
+            //add annotation to method
+            //[DisableCors] 
+
         }
     }
 }
