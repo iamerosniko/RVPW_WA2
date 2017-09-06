@@ -1,0 +1,901 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Eros Alvarez\Documents\wp</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/HelpPage/HelpPage.css">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/Api.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/CollectionModelDescription.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ComplexTypeModelDescription.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/DictionaryModelDescription.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/EnumTypeModelDescription.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/HelpPageApiModel.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ImageSample.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/InvalidSample.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/KeyValuePairModelDescription.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ModelDescriptionLink.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Parameters.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Samples.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/SimpleTypeModelDescription.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/TextSample.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/Index.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/ResourceModel.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Shared/_Layout.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Web.config">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/_ViewStart.cshtml">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="assets/css/check-templates/blue.png">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/css/check-templates/elegant.png">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/css/Checkboxes.css">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/css/ng2-select.css">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/css/SideNav.css">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/css/Site.css">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/images/background.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/images/JohnHancock.png">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/images/Manulife.png">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/images/Manulife_Logo.png">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/images/Manulife_Logo_Small.png">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/01-Mission Vision.png">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/02-Organizational Chart.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/04-Functional Tower.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/disprograms/aspire.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/disprograms/careers.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/disprograms/cares.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/disprograms/digerati.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/disprograms/motivate.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/disprograms/New folder/Aspire.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/disprograms/New folder/Careers.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/disprograms/New folder/Cares.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/disprograms/New folder/Digerati.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/disprograms/New folder/Motivate.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/functional towers.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/functional towers2.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/strategies/DIS-Strategies.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/strategies/Strategy-1.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/strategies/Strategy-2.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/strategies/Strategy-3.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-overview/strategies/Strategy-4.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-tools/Khronos.pdf">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-tools/MBPS Hotlines.jpg">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-tools/OPT.pdf">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/dis-tools/Workday.pdf">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/ana.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/arvan.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/cyren.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/denmar.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/DSS.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/Gelo.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/gk.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/Harri.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/inah.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/Joyce.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/Kenneth.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/leny.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/paulyn.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/rex.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/richard.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/roztle.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/rudi.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/ryan.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/tim.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/leaders/yerrick.mp4">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/policies/Bereavement Policy.pdf">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/policies/Information Security_Other Asia and Support.pdf">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/policies/Privacy Policy_CDN, Other Asia and Support_08-2012.pdf">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/policies/VACATION LEAVE.pdf">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/policies/WORK RULES.pdf">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide1.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide10.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide11.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide12.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide13.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide14.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide15.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide16.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide17.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide18.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide19.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide2.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide20.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide21.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide22.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide23.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide24.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide25.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide26.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide27.JPG">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide28.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide29.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide3.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide30.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide31.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide32.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide33.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide4.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide5.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide6.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide7.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide8.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Apps/Slide9.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Images/albert.jpg">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Images/default.PNG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Images/eros.jpg">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Images/gk.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Images/jeng.jpg">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Images/joys.jpg">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Images/la.jpg">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Images/mat.jpg">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Images/nick.jpg">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/sample.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Scripts/jquery.min.js">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/css/bootstrap.css">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/css/bootstrap.css.map">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/css/bootstrap.min.css.map">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/js/bootstrap.js">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/js/bootstrap.min.js">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/bootstrap-3.3.7-dist/js/npm.js">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/css/font-awesome.css">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/css/font-awesome.min.css">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/fonts/fontawesome-webfont.eot">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/fonts/fontawesome-webfont.svg">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/fonts/fontawesome-webfont.woff">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/fonts/FontAwesome.otf">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/HELP-US-OUT.txt">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/animated.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/bordered-pulled.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/core.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/fixed-width.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/font-awesome.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/icons.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/larger.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/list.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/mixins.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/path.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/rotated-flipped.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/screen-reader.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/stacked.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/less/variables.less">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/font-awesome.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_animated.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_bordered-pulled.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_core.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_fixed-width.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_icons.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_larger.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_list.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_mixins.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_path.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_rotated-flipped.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_screen-reader.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_stacked.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/font-awesome-4.7.0/scss/_variables.scss">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/OrgChart.css">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/SideNav.css">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/Styles/Site.css">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_applicationdevelopment.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_applicationsupport.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_businessintelligence.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_cdninstisrm.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_cdnretailsrm.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_customerexperiencemanagement.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_esd.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_globalreporting.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsddatabaseadministration.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsddigitalandcollaborationplatformservices.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdgfl2appsupport.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdifsissupport.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdinvappsupport.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdinvestmentinformationservices.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdisaccountingsupport.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdplatformadmin.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdpmas.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdproductionservices.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdqlikviewdevelopment.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdreleasemanagement.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdschedulingautomation.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdsystemadministrator.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_gsdsystemsandplatformoperationservices.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_integrationtechservices.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_jhdevelopmentandsupportservices.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_jhinfosecmgt.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_jhitops.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_jhsasdatabase.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_jhsasdatamasking.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_jhsasplatformservices.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_jhsasrem.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_jhtass.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/teamorg_transitionservices.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Org/temp.html">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide1.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide10.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide11.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide12.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide13.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide14.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide15.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide16.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide17.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide18.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide19.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide2.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide20.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide21.JPG">
+      <publishTime>09/02/2017 12:52:12</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide22.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide23.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide24.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide25.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide26.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide27.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide28.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide29.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide3.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide30.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide31.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide32.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide33.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide34.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide4.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide5.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide6.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide7.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide8.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/team-overview/Team Services/Slide9.JPG">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="assets/workplace/Workplace Questions.txt">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>09/02/2017 13:09:27</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>09/02/2017 13:09:29</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>09/02/2017 13:09:29</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>09/02/2017 13:09:37</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>09/02/2017 13:09:38</publishTime>
+    </File>
+    <File Include="bin/ProjectWorkplaceAzure.dll">
+      <publishTime>09/05/2017 09:17:42</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>09/02/2017 13:09:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Cors.dll">
+      <publishTime>09/02/2017 13:09:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>09/02/2017 13:09:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Cors.dll">
+      <publishTime>09/02/2017 13:09:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>09/02/2017 13:09:33</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>09/02/2017 13:09:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>09/02/2017 13:09:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>09/02/2017 13:09:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>09/02/2017 13:09:31</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>09/02/2017 13:09:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>09/02/2017 13:09:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>09/02/2017 13:09:36</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>09/02/2017 13:09:39</publishTime>
+    </File>
+    <File Include="Content/fontawesome-webfont.674f50d287a8c48dc19b.eot">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Content/fontawesome-webfont.912ec66d7572ff821749.svg">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Content/fontawesome-webfont.af7ae505a9eed503f8b8.woff2">
+      <publishTime>09/02/2017 12:52:09</publishTime>
+    </File>
+    <File Include="Content/fontawesome-webfont.b06871f281fee6b241d6.ttf">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="Content/fontawesome-webfont.fee66e712a8a08eef580.woff">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="Content/glyphicons-halflings-regular.448c34a56d699c29117a.woff2">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="Content/glyphicons-halflings-regular.89889688147bd7575d63.svg">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="Content/glyphicons-halflings-regular.e18bbf611f2a2e43afc0.ttf">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="Content/glyphicons-halflings-regular.f4769f9bdb7466be6508.eot">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="Content/glyphicons-halflings-regular.fa2772327f55d8198301.woff">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="Content/styles.bundle.css">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="Migrations/PW_ViewEmployeeScore.View.sql">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="Migrations/PW_VW_QUESTIONS.View.sql">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/02/2017 12:52:13</publishTime>
+    </File>
+    <File Include="Scripts/inline.bundle.js">
+      <publishTime>09/05/2017 00:42:54</publishTime>
+    </File>
+    <File Include="Scripts/main.bundle.js">
+      <publishTime>09/05/2017 00:42:54</publishTime>
+    </File>
+    <File Include="Scripts/polyfills.bundle.js">
+      <publishTime>09/05/2017 00:42:54</publishTime>
+    </File>
+    <File Include="Scripts/scripts.bundle.js">
+      <publishTime>09/05/2017 00:42:54</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>09/02/2017 12:52:10</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>09/02/2017 12:52:11</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/05/2017 09:17:46</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
